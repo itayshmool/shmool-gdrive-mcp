@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { describe, it, before, after } from 'node:test';
 import { setupTestServer, type TestContext } from '../helpers/setup-server.js';
 
-const EXPECTED_TOOL_COUNT = 96;
+const EXPECTED_TOOL_COUNT = 98;
 
 const EXPECTED_TOOLS = [
   'search', 'createTextFile', 'updateTextFile', 'createFolder', 'listFolder', 'listSharedDrives',
@@ -28,6 +28,7 @@ const EXPECTED_TOOLS = [
   'insertTable', 'editTableCell', 'insertImageFromUrl', 'insertLocalImage',
   'listGoogleDocs', 'getDocumentInfo', 'addDocumentTab', 'renameDocumentTab', 'insertSmartChip', 'readSmartChips',
   'convertPdfToGoogleDoc', 'bulkConvertFolderPdfs', 'uploadPdfWithSplit',
+  'generateImage', 'editImage',
 ];
 
 describe('Tool Registry', () => {

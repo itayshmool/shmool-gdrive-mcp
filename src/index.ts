@@ -26,6 +26,7 @@ import * as docsTools from './tools/docs.js';
 import * as sheetsTools from './tools/sheets.js';
 import * as slidesTools from './tools/slides.js';
 import * as calendarTools from './tools/calendar.js';
+import * as imagenTools from './tools/imagen.js';
 
 // Cached service instances — only recreated when authClient changes
 let _drive: drive_v3.Drive | null = null;
@@ -199,7 +200,7 @@ async function ensureAuthenticated() {
 // -----------------------------------------------------------------------------
 // DOMAIN MODULES
 // -----------------------------------------------------------------------------
-const domainModules = [driveTools, docsTools, sheetsTools, slidesTools, calendarTools];
+const domainModules = [driveTools, docsTools, sheetsTools, slidesTools, calendarTools, imagenTools];
 
 function buildToolContext(): ToolContext {
   return {

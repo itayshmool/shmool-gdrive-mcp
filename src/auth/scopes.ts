@@ -11,18 +11,20 @@ export const SCOPE_ALIASES: Record<string, string> = {
   presentations: 'https://www.googleapis.com/auth/presentations',
   calendar: 'https://www.googleapis.com/auth/calendar',
   'calendar.events': 'https://www.googleapis.com/auth/calendar.events',
+  'generative-language': 'https://www.googleapis.com/auth/generative-language',
 };
 
 export const SCOPE_PRESETS: Record<string, string[]> = {
   readonly: ['drive.readonly'],
   'content-editor': ['drive.file', 'documents', 'spreadsheets', 'presentations'],
-  full: ['drive', 'documents', 'spreadsheets', 'presentations', 'calendar', 'calendar.events'],
+  full: ['drive', 'documents', 'spreadsheets', 'presentations', 'calendar', 'calendar.events', 'generative-language'],
 };
 
 export const DEFAULT_SCOPES: readonly string[] = [
   'drive', 'drive.file', 'drive.readonly',
   'documents', 'spreadsheets', 'presentations',
   'calendar', 'calendar.events',
+  'generative-language',
 ].map((s) => SCOPE_ALIASES[s]);
 
 /**
